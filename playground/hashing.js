@@ -1,12 +1,11 @@
 const {SHA256} = require('crypto-js');
 const jwt = require('jsonwebtoken');
 var data = {
-  hoten:"Nguyen Van Teo",
-  email:"teo@khoapham.vn"
+  id:10
 };
-var token = jwt.sign(data, 'DUNG_CHO_AI_BIET_NHA');
+var token = jwt.sign(data, '123abc');
 console.log(token);
-var decode = jwt.verify(token, 'DUNG_CHO_AI_BIET_NHA');
+var decode = jwt.verify(token, '123abc');
 console.log('decode',decode);
 
 // var message = "I am user number 3";
